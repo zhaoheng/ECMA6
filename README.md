@@ -19,8 +19,10 @@ Here are the steps to compile ECMA5 into gulp：
 Here are second ways, using pure Babel method:
   
   1. npm install --save-dev babel-cli babel-preset-es2015 babel-preset-stage-0
-     (For Browserify workflows, you may need these, as well:  npm install --save-dev babelify browserify )
+  
+       (For Browserify workflows, you may need these, as well:  npm install --save-dev babelify browserify )
 
   2. babel script.js --out-file script-compiled.js
+     
      (babel -d build-dir source-dir)
      (browserify script.js -t babelify --outfile bundle.js)
