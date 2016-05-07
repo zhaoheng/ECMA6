@@ -16,6 +16,26 @@ Here are the steps to compile ECMA5 into gulp：
             "presets": ["es2015"]
         }
 
+      if you want to add reactJs support, do it below:
+      
+         1. npm install --save-dev babel-preset-react
+         
+         2. "babel": {
+              "ignore": [],
+              "presets": ["es2015","react"]
+            }  
+            
+            "browserify": {
+                 "transform": [
+                                  [
+                                      "babelify",
+                                      {
+                                         "presets": ["es2015"]
+                                      }
+                                  ]
+                  ]
+            }
+
 Here are second ways, using pure Babel method:
   
   1. npm install --save-dev babel-cli babel-preset-es2015 babel-preset-stage-0
@@ -25,4 +45,5 @@ Here are second ways, using pure Babel method:
   2. babel script.js --out-file script-compiled.js
      
      (babel -d build-dir source-dir)
+
      (browserify script.js -t babelify --outfile bundle.js)
