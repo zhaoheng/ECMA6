@@ -1,0 +1,43 @@
+{
+  "name": "promo_vue",
+  "version": "1.0.0",
+  "description": "* promo\\\r \t* dist\\ 编译产生的js文件和图片\r \t\t* app.build.js 正式环境运行文件\r \t\t* vendor.build.js 正式环境运行文件（一般不会变动，分离出部分公用库）\r \t\t* activity.build.js/config.build.js/bill.build.js... 测试环境运行文件\r \t* lib\\ 手动引入的js文件，需要依赖于jquery的插件都放置于jquery\\下 \r \t* route.js 应用于测试环境多个js切换功能\r \t* src\\ 生产环境\r \t\t* css\\ 公用css文件\r \t\t* image\\ 所有引用图片\r \t\t* components\\ 所有模块\r \t\t\t* public\\ 公共组件（头部、尾部、子导航、拟态组件等）\r \t\t\t* index\\ 首页组件\r \t\t\t* activity\\ 运营活动模块组件\r \t\t\t* config\\ 应用配置模块组件\r \t\t\t* bill\\ 话费服务模块组件\r \t\t\t* wechat\\ 微信模块组件\r \t\t\t* user\\ 用户中心模块组件\r \t\t* app.vue 入口组件，所有页面组件的入口组件（包含测试和正式）\r \t\t* app.js 正式环境的路由配置\r \t\t* activity.js/config.js/bill.js... 测试环境的路由配置（每次加一个页面模块需要加2个地方的路由）\r \t\t* utils.js 小型工具库\r \t\t* store.js 小型静态存储（目前只用于appType的静态存储）",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --progress --hide-modules --config build/webpack.dev.config.js",
+    "prod": "webpack --progress --hide-modules --config build/webpack.prod.config.js",
+    "dev-w": "webpack --progress --colors --watch --config build/webpack.dev.config.js",
+    "prod-w": "webpack --progress --colors --watch --config build/webpack.prod.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^1.0.16"
+  },
+  "devDependencies": {
+    "babel-core": "^6.5.2",
+    "babel-loader": "^6.2.3",
+    "babel-plugin-transform-runtime": "^6.5.2",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-runtime": "^5.8.35",
+    "bootstrap": "^3.3.6",
+    "css-loader": "^0.23.1",
+    "director": "^1.2.8",
+    "exports-loader": "^0.6.3",
+    "expose-loader": "^0.7.1",
+    "file-loader": "^0.8.5",
+    "jquery": "^2.2.1",
+    "node-sass": "^3.4.2",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
+    "template-html-loader": "0.0.3",
+    "underscore": "^1.8.3",
+    "vue-hot-reload-api": "^1.3.2",
+    "vue-html-loader": "^1.2.0",
+    "vue-loader": "^8.1.3",
+    "vue-router": "^0.7.11",
+    "vue-style-loader": "^1.0.0",
+    "webpack": "^1.12.13",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
